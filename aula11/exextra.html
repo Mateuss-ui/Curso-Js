@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de nacionalidades</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: white;
+            font-size: 18pt;
+            font: arial;
+        }
+    </style>
+    <h1>
+        Sistema de nacionalidades
+    </h1>
+    <input type="text" name="nac" id="nac">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"> 
+        Sua nacionalidade é :
+    </div> 
+    <script>
+        function verificar() {
+            let pais = document.getElementById("nac").value.toLowerCase();
+            let res = document.getElementById("res")
+            if (pais == 'brasil') {
+                res.innerHTML += `<p>Voce nasceu no ${pais} portanto vc é brasileiro<p>`
+            } else {
+                res.innerHTML += `<p>Voce nasceu no ${pais} portanto vc é estrangeiro<p>`
+            }          
+        }
+</script>    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color:  white;
+            font-size: 18pt;
+            font: arial;
+        }
+        h1#titulo {
+            color: rgb(0, 0, 0);
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+    <h1 id="titulo">
+        Sistema de mutas
+    </h1>
+    Velocidade do carro  <input type="number" name="vel" id="vel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()"> 
+    <div id="res">
+        Resultado
+    </div>
+    <script>
+       function calcular() {
+        let velocidade = document.getElementById('vel')
+        let res = document.getElementById('res')
+        let vel = Number(velocidade.value)
+        if (vel > 60) {
+            res.innerHTML = `Sua velocidade é de ${vel} voce foi mutado`
+            res.innerHTML += `<p> Voce foi <strong> Multado <strong> <p>`
+        } else {
+            res.innerHTML = "Voce está dirigindo na velocidade normal"
+        }
+        res.innerHTML += `<p> Dirija sempre com sinto de segurança<p>`
+}
+    </script>
+</body>
+</html>
